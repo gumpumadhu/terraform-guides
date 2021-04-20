@@ -22,3 +22,14 @@ resource "aws_instance" "ubuntu" {
     Name = var.name
   }
 }
+
+resource "aws_instance" "ubuntu-1" {
+  ami           = var.ami_id
+  instance_type = var.instance_type
+  availability_zone = var.aws_region_az
+
+  tags = {
+    Name = "avinash-terraform"
+  }
+  depends_on = [aws_instance.ubuntu]
+}
