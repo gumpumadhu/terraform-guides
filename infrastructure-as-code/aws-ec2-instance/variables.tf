@@ -1,11 +1,11 @@
 variable "aws_region" {
   description = "AWS region"
-  default = "us-west-1"
+  default = "us-west-2"
 }
 
 variable "aws_region_az" {
   description = "AWS region AZ"
-  default = "us-west-1b"
+  default = "us-west-2b"
 }
 
 variable "ami_id" {
