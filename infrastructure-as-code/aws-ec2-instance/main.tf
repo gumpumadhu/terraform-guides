@@ -36,6 +36,8 @@ resource "aws_instance" "ubuntu-1" {
 
   tags = {
     Name = "avinash-terraform"
+    env = "qa"
+    email       = "madhu@rafay.co"
   }
   depends_on = [aws_instance.ubuntu]
 }
