@@ -4,6 +4,12 @@ terraform {
 
 provider "aws" {
   region = "${var.aws_region}"
+  default_tags {
+    tags = {
+      email = "madhu@rafay.co"
+      env       = "qa"
+    }
+  }
 }
 
 resource "aws_instance" "ubuntu" {
