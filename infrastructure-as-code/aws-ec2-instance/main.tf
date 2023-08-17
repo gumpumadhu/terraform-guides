@@ -26,11 +26,11 @@ resource "aws_instance" "ubuntu" {
 
   tags = {
     Name = var.name
-    env = "qa"
+    env = "dev"
     email       = "madhu@rafay.co"
   }
   volume_tags = {
-    env = "qa"
+    env = "dev"
     email       = "madhu@rafay.co"
   }
 }
@@ -42,11 +42,11 @@ resource "aws_instance" "ubuntu-1" {
 
   tags = {
     Name = "avinash-terraform"
-    env = "qa"
+    env = "dev"
     email       = "madhu@rafay.co"
   }
   volume_tags = {
-    env = "qa"
+    env = "dev"
     email       = "madhu@rafay.co"
   }
   depends_on = [aws_instance.ubuntu]
