@@ -13,7 +13,7 @@ provider "aws" {
   region = var.aws_region
   default_tags {
     tags = {
-      env = "qa"
+      env = "dev"
       email       = "madhu@rafay.co"
     }
   }
