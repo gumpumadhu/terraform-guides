@@ -20,10 +20,10 @@ variable "instance_type" {
 
 variable "name" {
   description = "name to pass to Name tag"
-  default = "madhu-infra-provisioner1"
+  default = "demo-instance1"
 }
 
 variable "name1" {
   description = "name to pass to Name tag"
-  default = "madhu-infra-provisioner2"
+  default = "demo-instance2"
 }
