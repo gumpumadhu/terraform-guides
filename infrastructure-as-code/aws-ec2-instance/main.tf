@@ -43,7 +43,7 @@ resource "aws_instance" "ubuntu-1" {
   tags = {
     Name = "avinash-terraform"
     env = "dev"
-    email       = "madhu@rafay.co"
+    email       = "avinash@rafay.co"
   }
   volume_tags = {
     env = "dev"
