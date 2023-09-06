@@ -41,7 +41,7 @@ resource "aws_instance" "ubuntu-1" {
   availability_zone = var.aws_region_az
 
   tags = {
-    Name = "madhu-terraform"
+    Name = var.name1
     env = "dev"
     email       = "madhu@rafay.co"
   }
