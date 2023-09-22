@@ -34,4 +34,19 @@ resource "aws_instance" "ubuntu" {
     email       = "madhu@rafay.co"
   }
 }
+resource "aws_instance" "ubuntu-1" {
+  ami           = var.ami_id
+  instance_type = var.instance_type
+  availability_zone = var.aws_region_az
 
+  tags = {
+    Name = var.name1
+    env = "qa"
+    email       = "madhu@rafay.co"
+  }
+  volume_tags = {
+    env = "qa"
+    email       = "madhu@rafay.co"
+  }
+  depends_on = [aws_instance.ubuntu]
+}
