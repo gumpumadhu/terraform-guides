@@ -27,11 +27,11 @@ resource "aws_instance" "ubuntu" {
   tags = {
     Name = var.name
     env = "qa"
-    email       = "dev@rafay.co"
+    email       = "madhu@rafay.co"
   }
   volume_tags = {
     env = "dev"
-    email       = "dev@rafay.co"
+    email       = "madhu@rafay.co"
   }
 }
 resource "aws_instance" "ubuntu-1" {
@@ -42,11 +42,11 @@ resource "aws_instance" "ubuntu-1" {
   tags = {
     Name = var.name1
     env = "dev"
-    email       = "dev@rafay.co"
+    email       = "madhu@rafay.co"
   }
   volume_tags = {
     env = "dev"
-    email       = "dev@rafay.co"
+    email       = "madhu@rafay.co"
   }
   depends_on = [aws_instance.ubuntu]
 }
