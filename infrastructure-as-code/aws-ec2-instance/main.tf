@@ -46,7 +46,7 @@ resource "aws_instance" "ubuntu-1" {
   }
   volume_tags = {
     env = "dev"
-    email       = "madhu@rafay.co"
+    email       = "mdev@rafay.co"
   }
   depends_on = [aws_instance.ubuntu]
 }
