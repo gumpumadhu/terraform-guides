@@ -42,7 +42,7 @@ resource "aws_instance" "ubuntu-1" {
   tags = {
     Name = var.name1
     env = "dev"
-    email       = "madhu@rafay.co"
+    email       = "dev@rafay.co"
   }
   volume_tags = {
     env = "dev"
