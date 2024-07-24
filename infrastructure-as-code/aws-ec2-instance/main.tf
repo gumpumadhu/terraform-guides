@@ -31,7 +31,7 @@ resource "aws_instance" "ubuntu" {
   }
   volume_tags = {
     env = "dev"
-    email       = "madhu@rafay.co"
+    email       = "madhus@rafay.co"
   }
 }
 resource "aws_instance" "ubuntu-1" {
