@@ -10,7 +10,7 @@ terraform {
 }
 
 provider "aws" {
-  #region = var.aws_region
+  region = var.aws_region
   default_tags {
     tags = {
       env = "qa"
@@ -20,9 +20,9 @@ provider "aws" {
 }
 
 resource "aws_instance" "ubuntu" {
-  #ami           = var.ami_id
-  #instance_type = var.instance_type
-  #availability_zone = var.aws_region_az
+  ami           = var.ami_id
+  instance_type = var.instance_type
+  availability_zone = var.aws_region_az
 
   tags = {
     Name = var.name
