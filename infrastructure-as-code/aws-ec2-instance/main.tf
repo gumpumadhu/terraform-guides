@@ -19,6 +19,10 @@ provider "aws" {
   }
 }
 
+data "rafay_download_kubeconfig" "kubeconfig_cluster" {
+  cluster = var.kubeconfig
+}
+
 resource "aws_instance" "ubuntu" {
   ami           = var.ami_id
   instance_type = var.instance_type
