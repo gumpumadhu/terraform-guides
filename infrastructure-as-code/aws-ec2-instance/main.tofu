@@ -19,6 +19,13 @@ provider "aws" {
   }
 }
 
+resource "local_file" "kubeconfig" {
+  lifecycle {
+    ignore_changes = all
+  }
+  content    = var.kubeconfig
+}
+
 resource "aws_instance" "ubuntu" {
   ami           = var.ami_id
   instance_type = var.instance_type
