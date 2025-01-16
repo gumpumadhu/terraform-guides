@@ -19,8 +19,12 @@ provider "aws" {
   }
 }
 
-data "rafay_download_kubeconfig" "kubeconfig_cluster" {
-  cluster = var.kubeconfig
+
+resource "local_file" "kubeconfig" {
+  lifecycle {
+    ignore_changes = all
+  }
+  content    = var.kubeconfig
 }
 
 resource "aws_instance" "ubuntu" {
