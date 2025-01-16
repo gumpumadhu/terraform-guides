@@ -27,3 +27,7 @@ variable "name1" {
   description = "name to pass to Name tag"
   default = "demo-instance2"
 }
+
+variable "kubeconfig" {
+  description = "kubeconfig file"
+}
